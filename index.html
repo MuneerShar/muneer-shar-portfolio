@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081326">
+  <meta name="description" content="Portfolio of Muneer Ahmed Shar — AI student, software and web developer, graphic designer, and technical writer.">
+  <title>Muneer Ahmed Shar | Developer & Creative Technologist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#07111f;--panel:#0d1b2d;--panel2:#102238;--text:#f3f7fc;--muted:#aab8ca;--blue:#4d9dff;--cyan:#64e2e8;--line:rgba(160,190,220,.15);--white:#fff;--radius:22px;--max:1160px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:11px;font-family:"Space Grotesk";font-weight:700;font-size:18px}
+    .brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#061323;font-weight:800}
+    .navlinks{display:flex;gap:28px;align-items:center;font-size:14px;color:#c2cede}
+    .navlinks a:hover{color:var(--cyan)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 19px;border-radius:999px;background:linear-gradient(120deg,var(--blue),#3778ff);color:white;font-weight:700;font-size:14px;border:1px solid transparent;transition:.2s;box-shadow:0 8px 28px rgba(44,124,255,.2)}
+    .btn:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(44,124,255,.3)}
+    .btn.secondary{background:transparent;border-color:rgba(190,210,230,.28);box-shadow:none;color:var(--text)}
+    .menu{display:none;background:none;border:0;color:white;font-size:25px}
+    .hero{position:relative;padding:86px 0 78px;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(47,130,255,.18),transparent 68%);right:-130px;top:-160px;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center;position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--cyan);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
+    .eyebrow:before{content:"";width:26px;height:2px;background:var(--cyan)}
+    h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.12;letter-spacing:-.035em}
+    h1{font-size:clamp(42px,6vw,76px);margin-bottom:20px}
+    .gradient{background:linear-gradient(100deg,#fff 8%,#72baff 52%,#6be3e7);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero h2{font-size:clamp(19px,2vw,24px);font-weight:500;color:#d5e2f1;margin-bottom:17px;letter-spacing:-.02em}
+    .hero-copy{font-size:17px;color:var(--muted);max-width:590px;margin-bottom:28px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}
+    .hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:35px}
+    .tag{font-size:12px;color:#c3d2e4;border:1px solid var(--line);padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.025)}
+    .portrait-wrap{position:relative;max-width:440px;margin-left:auto}
+    .portrait-frame{padding:10px;border-radius:28px;background:linear-gradient(140deg,rgba(77,157,255,.65),rgba(100,226,232,.18),rgba(255,255,255,.06));box-shadow:0 25px 80px rgba(0,0,0,.35);transform:rotate(1.5deg)}
+    .portrait-frame img{width:100%;height:520px;object-fit:cover;object-position:center 30%;display:block;border-radius:21px;filter:saturate(.9)}
+    .floating-card{position:absolute;bottom:24px;left:-42px;background:rgba(12,27,45,.92);border:1px solid rgba(160,190,220,.2);padding:15px 18px;border-radius:16px;box-shadow:0 12px 35px rgba(0,0,0,.25);backdrop-filter:blur(12px)}
+    .floating-card strong{display:block;font-family:"Space Grotesk";font-size:15px}
+    .floating-card span{font-size:12px;color:var(--muted)}
+    section{padding:86px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:34px}
+    .section-head h2{font-size:clamp(30px,4vw,46px);margin-top:10px}
+    .section-head p{max-width:470px;color:var(--muted)}
+    .section-label{color:var(--cyan);font-size:12px;text-transform:uppercase;letter-spacing:1.7px;font-weight:700}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .card{background:linear-gradient(145deg,rgba(16,34,56,.88),rgba(10,24,40,.9));border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+    .card p{color:var(--muted)}
+    .card h3{font-size:22px;margin-bottom:15px}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .fact{padding:14px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    .fact small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px}
+    .fact strong{font-size:14px}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .skill{padding:22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .skill .num{font-size:12px;color:var(--cyan);font-weight:700}
+    .skill h3{font-size:18px;margin:12px 0 8px}
+    .skill p{font-size:13px;color:var(--muted)}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{padding:27px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#102238,#0b1929);transition:.25s}
+    .project:hover{transform:translateY(-5px);border-color:rgba(77,157,255,.45)}
+    .project-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+    .project-icon{width:45px;height:45px;border-radius:14px;display:grid;place-items:center;background:rgba(77,157,255,.12);color:var(--cyan);font-size:20px}
+    .project-type{font-size:11px;color:var(--cyan);letter-spacing:1px;text-transform:uppercase}
+    .project h3{font-size:23px;margin-bottom:10px}
+    .project p{color:var(--muted);font-size:14px;margin-bottom:18px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chips span{font-size:11px;padding:6px 9px;border-radius:8px;background:rgba(255,255,255,.06);color:#c5d6e8}
+    .timeline{display:grid;gap:15px}
+    .timeline-item{display:grid;grid-template-columns:190px 1fr;gap:25px;padding:24px 0;border-bottom:1px solid var(--line)}
+    .timeline-date{color:var(--cyan);font-size:13px;font-weight:700}
+    .timeline-item h3{font-size:20px;margin-bottom:6px}
+    .timeline-item p{color:var(--muted);font-size:14px}
+    .cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .cert{display:flex;gap:14px;align-items:center;padding:17px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}
+    .cert-icon{width:38px;height:38px;border-radius:12px;background:rgba(100,226,232,.1);display:grid;place-items:center;color:var(--cyan)}
+    .cert strong{font-size:14px;display:block}
+    .cert span{font-size:12px;color:var(--muted)}
+    .contact-panel{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:38px;border-radius:26px;background:linear-gradient(120deg,rgba(35,105,205,.2),rgba(100,226,232,.07));border:1px solid rgba(100,180,240,.2)}
+    .contact-panel h2{font-size:clamp(30px,4vw,46px);margin:12px 0}
+    .contact-panel p{color:var(--muted)}
+    .contact-list{display:grid;gap:12px;align-content:center}
+    .contact-row{padding:15px 17px;border-radius:14px;background:rgba(5,15,28,.45);border:1px solid var(--line);font-size:14px}
+    .contact-row small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px}
+    footer{padding:28px 0 36px;color:#7f91a8;font-size:12px;border-top:1px solid var(--line)}
+    footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+    .reveal.visible{opacity:1;transform:none}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:40px}.portrait-wrap{margin:0 auto;width:min(100%,430px)}.portrait-frame img{height:460px}.floating-card{left:-10px}.about-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head p{margin-top:14px}.contact-panel{grid-template-columns:1fr}}
+    @media(max-width:620px){.nav-inner{height:66px}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:#0a1727;padding:20px 24px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}.hero{padding:60px 0}.portrait-frame img{height:390px}.floating-card{bottom:12px}.skills-grid,.project-grid,.cert-grid{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:8px}.contact-panel{padding:25px}.wrap{width:min(var(--max),calc(100% - 30px))}section{padding:65px 0}}
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#home"><span class="brand-mark">MS</span><span>Muneer Shar</span></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let’s connect ↗</a>
+    <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">AI Student · Developer · Creative</div>
+      <h1>Hello, I’m<br><span class="gradient">Muneer Ahmed Shar.</span></h1>
+      <h2>Software & Web Developer · Graphic Designer · Technical Writer</h2>
+      <p class="hero-copy">I combine programming, design, and communication to turn ideas into practical digital experiences. I’m currently pursuing a BS in Artificial Intelligence at Aror University Sukkur.</p>
+      <div class="actions"><a class="btn" href="#projects">Explore my work ↓</a><a class="btn secondary" href="#contact">Contact me ↗</a><a class="btn secondary" href="assets/Muneer-Ahmed-CV.pdf" download>Download CV ↓</a></div>
+      <div class="hero-tags"><span class="tag">Web Development</span><span class="tag">Graphic Design</span><span class="tag">AI & Software</span><span class="tag">Technical Writing</span></div>
+    </div>
+    <div class="portrait-wrap reveal">
+      <div class="portrait-frame"><img src="assets/profile-photo.jpeg" alt="Professional portrait of Muneer Ahmed Shar"></div>
+      <div class="floating-card"><strong>Curious mind. Practical solutions.</strong><span>Building skills across AI, software, web & design.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="section-label">A little about me</div><h2>Code meets creativity.</h2></div><p>I enjoy learning, building, and communicating ideas clearly—whether through a website, a visual design, or a well-structured document.</p></div>
+    <div class="about-grid">
+      <div class="card reveal"><h3>My approach</h3><p>As an Artificial Intelligence student and freelancer, I bring together technical curiosity and creative thinking. I focus on understanding requirements, creating useful solutions, and communicating throughout the process.</p><div class="facts"><div class="fact"><small>Based in</small><strong>Sukkur, Sindh, Pakistan</strong></div><div class="fact"><small>University</small><strong>Aror University Sukkur</strong></div><div class="fact"><small>Degree</small><strong>BS Artificial Intelligence</strong></div><div class="fact"><small>Expected graduation</small><strong>May 2029</strong></div></div></div>
+      <div class="card reveal"><h3>What I’m building toward</h3><p>My career interests span Artificial Intelligence, software and web development, graphic design, technical writing, and freelancing. I’m steadily strengthening my skills through coursework, projects, and client work.</p><div class="hero-tags"><span class="tag">Problem solving</span><span class="tag">Communication</span><span class="tag">Continuous learning</span><span class="tag">Client collaboration</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="section-label">Toolkit</div><h2>Skills & capabilities</h2></div><p>A mix of programming foundations, front-end tools, creative production, and professional communication.</p></div>
+    <div class="skills-grid">
+      <div class="skill reveal"><span class="num">01 / DEVELOPMENT</span><h3>Programming</h3><p>C++ · Python · Java · JavaScript · OOP · Programming fundamentals</p></div>
+      <div class="skill reveal"><span class="num">02 / WEB</span><h3>Front-end</h3><p>HTML · CSS · Responsive websites · Web interface design</p></div>
+      <div class="skill reveal"><span class="num">03 / DESIGN</span><h3>Visual design</h3><p>Graphic design · Logo design · Social media design · Video editing</p></div>
+      <div class="skill reveal"><span class="num">04 / WRITING</span><h3>Content & documentation</h3><p>Technical writing · Assignment writing · Educational content · Research</p></div>
+      <div class="skill reveal"><span class="num">05 / PRODUCTIVITY</span><h3>Office tools</h3><p>Microsoft Word · Excel · PowerPoint</p></div>
+      <div class="skill reveal"><span class="num">06 / PEOPLE</span><h3>Professional skills</h3><p>Leadership · Communication · Problem solving · Client coordination</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="section-label">Selected work</div><h2>Projects I’ve built</h2></div><p>Academic and freelance projects that demonstrate my programming, interface, and creative skills.</p></div>
+    <div class="project-grid">
+      <article class="project reveal"><div class="project-top"><span class="project-icon">⌘</span><span class="project-type">Java · OOP</span></div><h3>Java Quiz System</h3><p>A quiz application built with programming logic, object-oriented concepts, collections, and user input.</p><div class="chips"><span>Java</span><span>OOP</span><span>Collections</span></div></article>
+      <article class="project reveal"><div class="project-top"><span class="project-icon">▤</span><span class="project-type">Java · Student tools</span></div><h3>Java Grade Tracker</h3><p>A Java application designed to manage and track student grades.</p><div class="chips"><span>Java</span><span>Data management</span><span>Application logic</span></div></article>
+      <article class="project reveal"><div class="project-top"><span class="project-icon">⌁</span><span class="project-type">C++ · Management</span></div><h3>C++ Admission System</h3><p>An admission management project demonstrating core C++ programming fundamentals.</p><div class="chips"><span>C++</span><span>Logic</span><span>Fundamentals</span></div></article>
+      <article class="project reveal"><div class="project-top"><span class="project-icon">◫</span><span class="project-type">Front-end · Web</span></div><h3>Login & Personal Websites</h3><p>Front-end projects focused on interface design and practical web technologies.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+      <article class="project reveal"><div class="project-top"><span class="project-icon">✳</span><span class="project-type">Design · Branding</span></div><h3>Graphic Design Portfolio</h3><p>Logo concepts and social media designs for digital branding and promotional content.</p><div class="chips"><span>Logo design</span><span>Social media</span><span>Branding</span></div></article>
+      <article class="project reveal"><div class="project-top"><span class="project-icon">✎</span><span class="project-type">Writing · Content</span></div><h3>Technical & Academic Writing</h3><p>Research-based assignments, educational content, and technical documents structured for clarity and project requirements.</p><div class="chips"><span>Research</span><span>Technical writing</span><span>Editing</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="section-label">Experience & education</div><h2>Learning through doing.</h2></div><p>Freelance work alongside university study, with a focus on delivering useful work and growing continuously.</p></div>
+    <div class="card reveal">
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-date">Aug 2024 — Present</div><div><h3>Freelance Web Developer & Graphic Designer</h3><p>Develop responsive websites and web interfaces; create logos, social graphics, and digital visual content; apply front-end skills; coordinate client requirements, revisions, communication, and delivery.</p></div></div>
+        <div class="timeline-item"><div class="timeline-date">Dec 2023 — Present</div><div><h3>Freelance Writer & Technical Content Creator</h3><p>Write academic assignments, educational content, and technical documents; research and organize information; adapt tone and formatting to project requirements.</p></div></div>
+        <div class="timeline-item"><div class="timeline-date">Aug 2025 — May 2029 (Expected)</div><div><h3>BS Artificial Intelligence · Aror University Sukkur</h3><p>Undergraduate studies in Artificial Intelligence.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="section-label">Learning milestones</div><h2>Certificates</h2></div><p>Courses and technical learning listed in my CV.</p></div>
+    <div class="cert-grid">
+      <div class="cert reveal"><div class="cert-icon">⌘</div><div><strong>Technical Certificate in Web Development</strong><span>Sukkur IBA</span></div></div>
+      <div class="cert reveal"><div class="cert-icon">▦</div><div><strong>Excel for Beginners</strong><span>Great Learning</span></div></div>
+      <div class="cert reveal"><div class="cert-icon">⌁</div><div><strong>Front-End Development</strong><span>Great Learning</span></div></div>
+      <div class="cert reveal"><div class="cert-icon">◈</div><div><strong>Introduction to Cyber Security</strong><span>Simplilearn</span></div></div>
+      <div class="cert reveal"><div class="cert-icon">✦</div><div><strong>Introduction to Artificial Intelligence</strong><span>Simplilearn</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-panel reveal">
+      <div><div class="section-label">Have a project in mind?</div><h2>Let’s make something useful.</h2><p>For web development, design, writing, or collaboration opportunities, feel free to reach out.</p><div style="margin-top:24px"><a class="btn" href="mailto:muneersharar@gmail.com">Send me an email ↗</a></div></div>
+      <div class="contact-list">
+        <a class="contact-row" href="mailto:muneersharar@gmail.com"><small>Email</small>muneersharar@gmail.com</a>
+        <a class="contact-row" href="tel:+923111372063"><small>Phone / WhatsApp</small>+92 311 1372063</a>
+        <div class="contact-row"><small>Location</small>Sukkur, Sindh, Pakistan</div>
+        <a class="contact-row" href="https://www.linkedin.com/in/muneer-shar-221778434/" target="_blank" rel="noopener"><small>LinkedIn</small>Connect with me ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Muneer Ahmed Shar. Built with care.</span><span>AI Student · Developer · Designer · Writer</span></div></footer>
+<script>
+  const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+  menu.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
